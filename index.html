@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Music</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1>Download Music from Spotify Playlist</h1>
+
+    <!-- Playlist form -->
+    <form id="playlist-form" action="get_music" method="get">
+        <label for="playlist">Enter the playlist link:</label>
+        <input type="text" name="playlist" id="playlist" required>
+        <button type="submit">Get Music</button>
+    </form>
+
+    <h2>Select the music you want to download from the playlist</h2>
+    <div id="music-list">
+        <input type="checkbox" name="music" value="music1" id="music1">1
+        <input type="checkbox" name="music" value="music2" id="music2">2
+        <!--check the boxes-->
+
+
+        <!-- The music from the playlist will be displayed here as checkboxes -->
+    </div>
+    <div id="output-location">
+        enter the location to save the music
+        </div>
+
+    <!-- Download section -->
+    <h2>Download the Music</h2> 
+    <div class="download">
+        <button class="deselectall" id="deselect-all">Deselect All</button>
+        <button class="selectall" id="select-all">Select All</button>
+        <button class="downloadSel" id="download-selected">Download Selected</button>
+    </div>
+
+    <h2>How to get the playlist link</h2>
+    <p>Open the playlist in Spotify, click on the three dots on the top right corner of the playlist, then click on Share and copy the link.</p>
+    <p>Paste the link in the input field above and click on Get Music.</p>
+    <p>Wait for the download to complete and enjoy your music!</p>
+
+</body>
+</html>
