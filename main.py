@@ -21,7 +21,7 @@ load_dotenv()
 client_Id = os.getenv("SPOTIFY_CLIENT_ID")
 client_Secret = os.getenv("SPOTIFY_CLIENT_SECRET")
 redirect_Uri = os.getenv("REDIRECT_URI")
-print(client_id, client_secret, redirect_uri)
+print(client_Id, client_Secret, redirect_Uri)
 
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(

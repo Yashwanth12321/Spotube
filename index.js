@@ -5,7 +5,7 @@ document.getElementById('playlist-form').addEventListener('submit', async functi
     const playlistUrl = document.getElementById('playlist').value;
 
     // Make a GET request to the backend with the playlist URL as a query parameter
-  const response = await fetch(`10.70.50.164:5000/get_music?playlist=${encodeURIComponent(playlistUrl)}`, {
+  const response = await fetch(`http://127.0.0.1:5000/get_music?playlist=${encodeURIComponent(playlistUrl)}`, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ document.getElementById('download-selected').addEventListener('click', async fun
     for (const song of selectedSongs) {
          
 
-        const response = await fetch('10.70.50.164:5000/download', {
+        const response = await fetch('http://127.0.0.1:5000/download', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
